@@ -1,0 +1,24 @@
+{
+  "name": "b2d",
+  "version": "1.0.0",
+  "description": "A simple app to convert binary to decimal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusjnh/b2d.git"
+  },
+  "keywords": [
+    "binary",
+    "decimal",
+    "convert"
+  ],
+  "author": "matheusjnh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusjnh/b2d/issues"
+  },
+  "homepage": "https://github.com/matheusjnh/b2d#readme"
+}
