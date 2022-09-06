@@ -1,5 +1,16 @@
-function App() {
-  return <h1>Hello, world!</h1>;
-}
+import { InputText } from "./components/input/InputText";
 
-export default App;
+export function App() {
+  return (
+    <>
+      <header>
+        <h1>B2D - Binary to Decimal</h1>
+      </header>
+
+      <main>
+        <InputText text="Binary" />
+        <InputText text="Decimal" />
+      </main>
+    </>
+  );
+}
