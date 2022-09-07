@@ -1,0 +1,13 @@
+.input-text {
+  padding: 8px;
+  border: none;
+  border: solid 1px rgb(221, 221, 221);
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.input-text:focus {
+  border-color: rgb(112, 112, 253);
+  outline: none;
+}
