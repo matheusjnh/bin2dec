@@ -15,6 +15,7 @@ export function App() {
           }}
         >
           <InputText
+            id="bin"
             placeholder="Binary"
             style={{
               flex: 1,
@@ -22,6 +23,7 @@ export function App() {
           />
 
           <InputText
+            id="dec"
             placeholder="Decimal"
             style={{
               flex: 1,
