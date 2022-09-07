@@ -9,7 +9,7 @@ type InputProps = {
 export function InputText({ id, placeholder, style }: InputProps) {
   return (
     <input
-      className="input-text"
+      className="c-input-text"
       id={id}
       type="text"
       placeholder={placeholder}
