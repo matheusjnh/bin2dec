@@ -8,8 +8,26 @@ export function App() {
       </header>
 
       <main>
-        <InputText text="Binary" />
-        <InputText text="Decimal" />
+        <div
+          style={{
+            display: "flex",
+            gap: "10px",
+          }}
+        >
+          <InputText
+            placeholder="Binary"
+            style={{
+              flex: 1,
+            }}
+          />
+
+          <InputText
+            placeholder="Decimal"
+            style={{
+              flex: 1,
+            }}
+          />
+        </div>
       </main>
     </>
   );
