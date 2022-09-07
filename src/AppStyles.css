@@ -1,4 +1,28 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: rgb(225, 225, 246);
   background: rgb(18, 18, 20);
+}
+
+.root {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main  ";
+  grid-template-columns: 1fr;
+}
+
+/* Media Queries */
+@media (min-width: 650px) {
+  .root {
+    grid-template-areas:
+      "header header header"
+      ".      main   .     ";
+    grid-template-columns: 1fr 650px 1fr;
+  }
 }

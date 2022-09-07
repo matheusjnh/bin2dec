@@ -1,0 +1,11 @@
+.c-input-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.c-input-container__group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
