@@ -52,17 +52,17 @@ function App() {
           <div className="c-input-container__group">
             <Label htmlFor="bin" text="Binary" />
             <InputText id="bin" onInput={onBinaryInput} isInvalid={isInvalid} />
-            <p
-              style={{
-                display: isInvalid ? "block" : "none",
-                paddingTop: "5px",
-                color: "rgb(255, 18, 35)",
-                fontFamily: "'Poppins', sans-serif",
-                fontWeight: "normal",
-              }}
-            >
-              Invalid binary value!
-            </p>
+            {isInvalid && (
+              <span
+                style={{
+                  paddingTop: "5px",
+                  color: "rgb(255, 18, 35)",
+                  fontSize: "18px",
+                }}
+              >
+                Invalid binary value!
+              </span>
+            )}
           </div>
 
           <div className="c-input-container__group">
