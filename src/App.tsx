@@ -10,23 +10,23 @@ import "./css/component/c-input-container.css";
 import "./css/layout/l-main.css";
 
 function App() {
-  const [decimal, setDecimal] = useState(0);
+  const [decimalValue, setDecimalValue] = useState(0);
   const [isInvalid, setIsInvalid] = useState(false);
 
   function convertBinaryToDecimal(binary: number): number {
     const binaryValueInString = binary.toString();
     const binaryValueLength = binaryValueInString.length;
 
-    let decimalValue = 0;
+    let decimalValueResult = 0;
 
     for (let i = 0; i < binaryValueLength; i++) {
       const powerExponent = binaryValueLength - i - 1;
 
-      decimalValue +=
+      decimalValueResult +=
         Number(binaryValueInString.charAt(i)) * Math.pow(2, powerExponent);
     }
 
-    return decimalValue;
+    return decimalValueResult;
   }
 
   function onBinaryInput(e: any) {
@@ -35,12 +35,12 @@ function App() {
 
     if (!isValidBinaryValue) {
       setIsInvalid(true);
-      setDecimal(0);
+      setDecimalValue(0);
 
       return;
     }
 
-    setDecimal(convertBinaryToDecimal(Number(inputValueInString)));
+    setDecimalValue(convertBinaryToDecimal(Number(inputValueInString)));
     setIsInvalid(false);
   }
 
@@ -67,7 +67,7 @@ function App() {
 
           <div className="c-input-container__group">
             <Label htmlFor="dec" text="Decimal" />
-            <InputText id="dec" value={decimal.toString()} />
+            <InputText id="dec" value={decimalValue.toString()} />
           </div>
         </div>
       </main>
