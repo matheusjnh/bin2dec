@@ -9,6 +9,7 @@ import "./css/layout/l-main.css";
 
 export function App() {
   const [decimal, setDecimal] = useState(0);
+  const [isInvalid, setIsInvalid] = useState(false);
 
   function convertBinaryToDecimal(binary: number): number {
     const binaryValueInString = binary.toString();
@@ -27,7 +28,18 @@ export function App() {
   }
 
   function onBinaryInput(e: any) {
-    setDecimal(convertBinaryToDecimal(Number(e.target.value)));
+    const inputValueInString = e.target.value;
+    const isValidBinaryValue = inputValueInString.match(/^[0-1]*$/);
+
+    if (!isValidBinaryValue) {
+      setIsInvalid(true);
+      setDecimal(0);
+
+      return;
+    }
+
+    setDecimal(convertBinaryToDecimal(Number(inputValueInString)));
+    setIsInvalid(false);
   }
 
   return (
@@ -37,7 +49,18 @@ export function App() {
         <div className="c-input-container">
           <div className="c-input-container__group">
             <Label htmlFor="bin" text="Binary" />
-            <InputText id="bin" onInput={onBinaryInput} />
+            <InputText id="bin" onInput={onBinaryInput} isInvalid={isInvalid} />
+            <p
+              style={{
+                display: isInvalid ? "block" : "none",
+                paddingTop: "5px",
+                color: "rgb(255, 18, 35)",
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: "normal",
+              }}
+            >
+              Invalid binary value!
+            </p>
           </div>
 
           <div className="c-input-container__group">
