@@ -7,7 +7,7 @@ type LabelProps = {
 
 export function Label({ htmlFor, text }: LabelProps) {
   return (
-    <label className="label" htmlFor={htmlFor}>
+    <label className="c-label" htmlFor={htmlFor}>
       {text}
     </label>
   );
