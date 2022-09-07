@@ -14,3 +14,7 @@
   border: 3px solid rgb(146, 2, 247);
   outline: none;
 }
+
+.c-input-text.c-input-text--invalid {
+  border-color: rgb(255, 18, 35);
+}
