@@ -1,7 +1,17 @@
+import "./InputTextStyles.css";
+
 type InputProps = {
-  text?: string;
+  placeholder?: string;
+  style?: { [key: string]: string | number };
 };
 
-export function InputText({ text }: InputProps) {
-  return <input type="text" value={text} />;
+export function InputText({ placeholder, style }: InputProps) {
+  return (
+    <input
+      className="input-text"
+      type="text"
+      placeholder={placeholder}
+      style={style}
+    />
+  );
 }
