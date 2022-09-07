@@ -6,6 +6,7 @@ type InputProps = {
   value?: string;
   style?: { [key: string]: string | number };
   onInput?: any;
+  isInvalid?: boolean;
 };
 
 export function InputText({
@@ -14,10 +15,14 @@ export function InputText({
   style,
   value,
   onInput,
+  isInvalid = false,
 }: InputProps) {
+  const cssClassForInvalidInput = isInvalid ? " c-input-text--invalid" : "";
+  const className = "c-input-text" + cssClassForInvalidInput;
+
   return (
     <input
-      className="c-input-text"
+      className={className}
       id={id}
       type="text"
       placeholder={placeholder}
