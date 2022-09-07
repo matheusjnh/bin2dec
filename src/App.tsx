@@ -13,17 +13,17 @@ function App() {
   const [decimalValue, setDecimalValue] = useState(0);
   const [isInvalid, setIsInvalid] = useState(false);
 
-  function convertBinaryToDecimal(binary: number): number {
-    const binaryValueInString = binary.toString();
-    const binaryValueLength = binaryValueInString.length;
+  function convertBinaryToDecimal(binaryValueInString: string): number {
+    const invertedBinaryValueInString = binaryValueInString
+      .split("")
+      .reverse()
+      .join("");
 
     let decimalValueResult = 0;
 
-    for (let i = 0; i < binaryValueLength; i++) {
-      const powerExponent = binaryValueLength - i - 1;
-
+    for (let i = 0; i < invertedBinaryValueInString.length; i++) {
       decimalValueResult +=
-        Number(binaryValueInString.charAt(i)) * Math.pow(2, powerExponent);
+        Number(invertedBinaryValueInString.charAt(i)) * Math.pow(2, i);
     }
 
     return decimalValueResult;
@@ -40,7 +40,7 @@ function App() {
       return;
     }
 
-    setDecimalValue(convertBinaryToDecimal(Number(inputValueInString)));
+    setDecimalValue(convertBinaryToDecimal(inputValueInString));
     setIsInvalid(false);
   }
 
