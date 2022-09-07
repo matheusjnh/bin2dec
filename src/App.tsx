@@ -1,3 +1,5 @@
+import ReactDOM from "react-dom";
+
 import { InputText } from "./components/input/InputText";
 import { Label } from "./components/label/Label";
 import { Header } from "./components/header/Header";
@@ -7,7 +9,7 @@ import "./AppStyles.css";
 import "./css/component/c-input-container.css";
 import "./css/layout/l-main.css";
 
-export function App() {
+function App() {
   const [decimal, setDecimal] = useState(0);
   const [isInvalid, setIsInvalid] = useState(false);
 
@@ -72,3 +74,6 @@ export function App() {
     </>
   );
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
