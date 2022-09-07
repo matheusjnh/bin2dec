@@ -1,34 +1,26 @@
 import { InputText } from "./components/input/InputText";
+import { Label } from "./components/label/Label";
+import { Header } from "./components/header/Header";
+
+import "./AppStyles.css";
+import "./css/component/c-input-container.css";
+import "./css/layout/l-main.css";
 
 export function App() {
   return (
     <>
-      <header>
-        <h1>B2D - Binary to Decimal</h1>
-      </header>
+      <Header />
+      <main className="l-main">
+        <div className="c-input-container">
+          <div className="c-input-container__group">
+            <Label htmlFor="bin" text="Binary" />
+            <InputText id="bin" />
+          </div>
 
-      <main>
-        <div
-          style={{
-            display: "flex",
-            gap: "10px",
-          }}
-        >
-          <InputText
-            id="bin"
-            placeholder="Binary"
-            style={{
-              flex: 1,
-            }}
-          />
-
-          <InputText
-            id="dec"
-            placeholder="Decimal"
-            style={{
-              flex: 1,
-            }}
-          />
+          <div className="c-input-container__group">
+            <Label htmlFor="dec" text="Decimal" />
+            <InputText id="dec" />
+          </div>
         </div>
       </main>
     </>
