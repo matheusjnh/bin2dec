@@ -6,7 +6,7 @@ type InputProps = {
   value?: string;
   style?: { [key: string]: string | number };
   onInput?: any;
-  isInvalid?: boolean;
+  borderColor: "default" | "error";
 };
 
 export function InputText({
@@ -15,10 +15,9 @@ export function InputText({
   style,
   value,
   onInput,
-  isInvalid = false,
+  borderColor = "default",
 }: InputProps) {
-  const cssClassForInvalidInput = isInvalid ? " c-input-text--invalid" : "";
-  const className = "c-input-text" + cssClassForInvalidInput;
+  const className = `c-input-text c-input-text--border-${borderColor}`;
 
   return (
     <input

@@ -51,7 +51,11 @@ function App() {
         <div className="c-input-container">
           <div className="c-input-container__group">
             <Label htmlFor="bin" text="Binary" />
-            <InputText id="bin" onInput={onBinaryInput} isInvalid={isInvalid} />
+            <InputText
+              id="bin"
+              onInput={onBinaryInput}
+              borderColor={isInvalid ? "error" : "default"}
+            />
             {isInvalid && (
               <span
                 style={{
@@ -67,7 +71,11 @@ function App() {
 
           <div className="c-input-container__group">
             <Label htmlFor="dec" text="Decimal" />
-            <InputText id="dec" value={decimalValue.toString()} />
+            <InputText
+              id="dec"
+              value={decimalValue.toString()}
+              borderColor="default"
+            />
           </div>
         </div>
       </main>

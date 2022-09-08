@@ -11,10 +11,13 @@
 }
 
 .c-input-text:focus {
-  border: 3px solid rgb(146, 2, 247);
   outline: none;
 }
 
-.c-input-text.c-input-text--invalid {
+.c-input-text.c-input-text--border-default:focus {
+  border-color: rgb(146, 2, 247);
+}
+
+.c-input-text.c-input-text--border-error {
   border-color: rgb(255, 18, 35);
 }
