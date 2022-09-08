@@ -6,8 +6,6 @@ import { Header } from "./components/header/Header";
 import { useState } from "react";
 
 import "./App.css";
-import "./css/component/c-input-container.css";
-import "./css/layout/l-main.css";
 
 function App() {
   const [decimalValue, setDecimalValue] = useState(0);
@@ -47,9 +45,9 @@ function App() {
   return (
     <>
       <Header />
-      <main className="l-main">
-        <div className="c-input-container">
-          <div className="c-input-container__group">
+      <main className="main">
+        <div className="input-container">
+          <div className="input-container__group">
             <Label htmlFor="bin" text="Binary" />
             <Input
               id="bin"
@@ -69,7 +67,7 @@ function App() {
             )}
           </div>
 
-          <div className="c-input-container__group">
+          <div className="input-container__group">
             <Label htmlFor="dec" text="Decimal" />
             <Input
               id="dec"
