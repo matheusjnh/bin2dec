@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import { Input } from "./components/input/Input";
 import { Label } from "./components/label/Label";
@@ -81,5 +81,5 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const appContainer = document.getElementById("app");
+createRoot(appContainer!).render(<App />);
