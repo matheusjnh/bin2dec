@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
-.c-input-text {
+.c-input {
   padding: 8px;
   border: none;
   border: 3px solid transparent;
@@ -10,14 +10,14 @@
   transition: 0.3s;
 }
 
-.c-input-text:focus {
+.c-input:focus {
   outline: none;
 }
 
-.c-input-text.c-input-text--border-default:focus {
+.c-input.c-input--border-default:focus {
   border-color: rgb(146, 2, 247);
 }
 
-.c-input-text.c-input-text--border-error {
+.c-input.c-input--border-error {
   border-color: rgb(255, 18, 35);
 }

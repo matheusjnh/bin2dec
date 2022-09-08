@@ -1,4 +1,4 @@
-import "./InputTextStyles.css";
+import "./Input.css";
 
 type InputProps = {
   id: string;
@@ -9,7 +9,7 @@ type InputProps = {
   borderColor: "default" | "error";
 };
 
-export function InputText({
+export function Input({
   id,
   placeholder,
   style,
@@ -17,7 +17,7 @@ export function InputText({
   onInput,
   borderColor = "default",
 }: InputProps) {
-  const className = `c-input-text c-input-text--border-${borderColor}`;
+  const className = `c-input c-input--border-${borderColor}`;
 
   return (
     <input

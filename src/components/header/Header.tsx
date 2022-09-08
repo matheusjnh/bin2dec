@@ -1,4 +1,4 @@
-import "./HeaderStyles.css";
+import "./Header.css";
 
 export function Header() {
   return (

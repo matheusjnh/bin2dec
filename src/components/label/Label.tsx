@@ -1,4 +1,4 @@
-import "./LabelStyles.css";
+import "./Label.css";
 
 type LabelProps = {
   text: string;

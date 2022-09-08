@@ -1,11 +1,11 @@
 import ReactDOM from "react-dom";
 
-import { InputText } from "./components/input/InputText";
+import { Input } from "./components/input/Input";
 import { Label } from "./components/label/Label";
 import { Header } from "./components/header/Header";
 import { useState } from "react";
 
-import "./AppStyles.css";
+import "./App.css";
 import "./css/component/c-input-container.css";
 import "./css/layout/l-main.css";
 
@@ -51,7 +51,7 @@ function App() {
         <div className="c-input-container">
           <div className="c-input-container__group">
             <Label htmlFor="bin" text="Binary" />
-            <InputText
+            <Input
               id="bin"
               onInput={onBinaryInput}
               borderColor={isInvalid ? "error" : "default"}
@@ -71,7 +71,7 @@ function App() {
 
           <div className="c-input-container__group">
             <Label htmlFor="dec" text="Decimal" />
-            <InputText
+            <Input
               id="dec"
               value={decimalValue.toString()}
               borderColor="default"
