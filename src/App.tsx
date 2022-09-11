@@ -27,8 +27,8 @@ function App() {
     return decimalValueResult;
   }
 
-  function onBinaryInput(e: any) {
-    const inputValueInString = e.target.value;
+  function onBinaryInput(e: Event) {
+    const inputValueInString = (e.target as HTMLInputElement).value;
     const isValidBinaryValue = inputValueInString.match(/^[0-1]*$/);
 
     if (!isValidBinaryValue) {
